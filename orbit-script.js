@@ -45,11 +45,11 @@ Directions
   } //other variables
 } //variables
 function windowResized() {
-  resizeCanvas(windowWidth-300, windowHeight);
+  resizeCanvas(windowWidth-50, windowHeight);
 }
 function setup() {
-    createCanvas(windowWidth-300 windowHeight);
-    initwidth = windowWidth-300;
+    createCanvas(windowWidth-50 windowHeight);
+    initwidth = windowWidth-50;
     initheight = windowHeight;
   
   for (var s = 0; s < borderx*bordery/7500; s++) {
