@@ -45,7 +45,7 @@ Directions
   } //other variables
 } //variables
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth-30, windowHeight);
 }
 function setup() {
     createCanvas(windowWidth, windowHeight);
