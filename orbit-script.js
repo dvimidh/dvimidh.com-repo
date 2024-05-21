@@ -49,7 +49,7 @@ function windowResized() {
 }
 function setup() {
     createCanvas(windowWidth-30, windowHeight);
-    initwidth = windowWidth;
+    initwidth = windowWidth-30;
     initheight = windowHeight;
   
   for (var s = 0; s < borderx*bordery/7500; s++) {
