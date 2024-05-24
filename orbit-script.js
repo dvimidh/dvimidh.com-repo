@@ -50,7 +50,7 @@ function windowResized() {
 function setup() {
     createCanvas(windowWidth/1.5, windowHeight-10);
     initwidth = windowWidth/1.5;
-    initheight = windowHeight/1.5;
+    initheight = windowHeight;
     
 
 
