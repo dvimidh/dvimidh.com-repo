@@ -45,13 +45,16 @@ Directions
   } //other variables
 } //variables
 function windowResized() {
-  resizeCanvas(windowWidth-50, windowHeight);
+  resizeCanvas(windowWidth-50, windowHeight-10);
 }
 function setup() {
-    createCanvas(windowWidth-50, windowHeight);
+    createCanvas(windowWidth-50, windowHeight-10);
     initwidth = windowWidth-50;
-    initheight = windowHeight;
-  
+    initheight = windowHeight-10;
+    
+
+
+
   for (var s = 0; s < borderx*bordery/7500; s++) {
   stars.push([random(width/2-borderx-1000, borderx+2000),random(height/2-borderx-2000, bordery-(height-borderx)+2000)])
   stars2.push([random(width/2-borderx-1000, borderx+2000),random(height/2-borderx-2000, bordery-(height-borderx)+2000)])
