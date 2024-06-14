@@ -348,14 +348,14 @@ function draw() {
      
   if (freescroll) {
     if (mouseisdown) {
-      mouseVelX = mouseX - pmouseX/scalez;
-      mouseVelY = mouseY - pmouseY/scalez;
+      mouseVelX = mouseX - pmouseX;
+      mouseVelY = mouseY - pmouseY;
     } else {
       mouseVelX = mouseVelX*0.9;
       mouseVelY = mouseVelY*0.9;
     }
-    scrollx+=mouseVelX;
-    scrolly+=mouseVelY;
+    scrollx+=mouseVelX/scalez;
+    scrolly+=mouseVelY/scalez;
   } else {
   scrollx = (-elipses[scrollcount].x);
   scrolly = (-elipses[scrollcount].y);
