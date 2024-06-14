@@ -348,8 +348,8 @@ function draw() {
      
   if (freescroll) {
     if (mouseisdown) {
-      mouseVelX = mouseX - pmouseX
-      mouseVelY = mouseY - pmouseY;
+      mouseVelX = mouseX - pmouseX/scalez
+      mouseVelY = mouseY - pmouseYscalez;
     } else {
       mouseVelX = mouseVelX*0.9;
       mouseVelY = mouseVelY*0.9;
