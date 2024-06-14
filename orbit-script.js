@@ -42,6 +42,8 @@ Directions
     var initheight = 0;
     var canSetup = true;
     var lineNumber = 50;
+    var mouseVelX = 0;
+    var mouseVelY = 0;
   } //other variables
 } //variables
 function windowResized() {
@@ -52,9 +54,6 @@ function setup() {
     initwidth = windowWidth/1.5;
     initheight = windowWidth/2.25;
     
-
-
-
   for (var s = 0; s < borderx*bordery/7500; s++) {
   stars.push([random(width/2-borderx-1000, borderx+2000),random(height/2-borderx-2000, bordery-(height-borderx)+2000)])
   stars2.push([random(width/2-borderx-1000, borderx+2000),random(height/2-borderx-2000, bordery-(height-borderx)+2000)])
@@ -157,10 +156,10 @@ scrolly = -300;
       SKeyDown = false;
     }
   };
-  mousedown = function() {
+  function mousePressed() {
     mouseisdown = true;
   };
-  mouseuo = function() {
+  function mouseReleased() {
     mouseisdown = false;
   };
 } //tracks the keys and mouse
@@ -295,10 +294,6 @@ function draw() {
   }
     canSetup = false;
   }
-    if (mouseisdown) {
-      gravity = 1;
-
-    }
   background(0);
   noFill();
   stroke(255);
@@ -352,18 +347,15 @@ function draw() {
      }
      
   if (freescroll) {
-    if (upKeyDown) {
-      scrolly += 1;
+    if (mouseisdown) {
+      mouseVelX = mouseX - pmouseX
+      mouseVelY = mouseY - pmouseY;
+    } else {
+      mouseVelX = mouseVelX*0.9;
+      mouseVelY = mouseVelY*0.9;
     }
-    if (downKeyDown) {
-      scrolly -= 1;
-    }
-    if (leftKeyDown) {
-      scrollx += 1;
-    }
-    if (rightKeyDown) {
-      scrollx -= 1;
-    }
+    scrollx+=mouseVelX;
+    scrolly+=mouseVelY;
   } else {
   scrollx = (-elipses[scrollcount].x);
   scrolly = (-elipses[scrollcount].y);
