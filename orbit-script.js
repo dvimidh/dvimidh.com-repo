@@ -354,8 +354,8 @@ function draw() {
       mouseVelX = mouseVelX*0.9;
       mouseVelY = mouseVelY*0.9;
     }
-    scrollx+=mouseVelX/scalez;
-    scrolly+=mouseVelY/scalez;
+    scrollx+=mouseVelX*scalez;
+    scrolly+=mouseVelY*scalez;
   } else {
   scrollx = (-elipses[scrollcount].x);
   scrolly = (-elipses[scrollcount].y);
