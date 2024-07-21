@@ -1,15 +1,4 @@
-/*
-Directions
 
-  -arrow keys to move
-  
-  -space to toggle cameral lock
-  
-  -shift and ctrl to switch celestial bodies
-  
-  -A and D to zoom in and out
-
-*/
 {
   {
     var leftKeyDown = false;
@@ -50,7 +39,8 @@ function windowResized() {
   resizeCanvas(windowWidth/1.5, windowWidth/2.25);
 }
 function setup() {
-    createCanvas(windowWidth/1.5, windowWidth/2.25);
+ let canvas = createCanvas(windowWidth/1.5, windowWidth/2.25);
+ canvas.parent("space");
     initwidth = windowWidth/1.5;
     initheight = windowWidth/2.25;
     
