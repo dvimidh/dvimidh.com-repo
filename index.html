@@ -25,12 +25,22 @@
             Padding-left:2.5%;
             Padding-Right:5%;
         }
+        .Help {
+            display: inline-block;
+            Padding-left:2.5%;
+            Padding-Right:0%;
+            font-weight: bold;
+        }
         a {
             color: inherit;
             text-decoration: inherit;
         }
         #Main {
             padding-top:5%;
+            text-align:center;
+        }
+        #Project {
+            padding-top:15%;
             text-align:center;
         }
         #main-text {
@@ -41,10 +51,19 @@
             width: 30%;
             margin: auto;
         }
+        #Image {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 50%;
+        }
 </style>
 <div id = "top">
     <div class="link" >
         <a href="/"> Home</a> 
+    </div>
+    <div class="Help">
+        <a>Links to Projects:</a>
     </div>
     <div class="link" >
         <a href="/N-Body"> N-Body</a> 
@@ -60,5 +79,21 @@
     <h1 style="font-size:60px;">Hi</h1>
     <p style = "padding:3%; font-size:40px;">I'm Dvimidh<br><br></p>
     <p id = "main-text">Here are some of my projects</p>
+</div>
+<div id = "Project" >
+    <a href="/N-Body"><h1 style="font-size:40px;padding-bottom:1%;">N-Body Simulation</h1></a>
+    <img src="N-Body.png"  class="Image">
+    <p style = "padding:3%; font-size:23px; font-weight: 40; max-width: 150; min-width: 100;">N-Body Simulator is a 2D N-body simulation written using the p5 javascript library.  
+        It features accurate N-Body gravity simulation, a randomly generated starry backdrop, and a rudimentary circles-only physics engine. (no rotation)<br></p>
+</div>
+<div id = "Project" >
+    <a href="/TheFactory"><h1 style="font-size:40px;padding-bottom:1%;">The Factory</h1></a>
+    <img src="TheFactory.png" class="Image">
+    <p style = "padding:3%; font-size:23px; font-weight: 40; max-width: 150; min-width: 100;">The Factory is short, story-driven platformer, fully developed by myself. Made in Construct 3, the game has a pixel-art style and retro-ish music made with beepbox. The gameplay is a mix of a metroidvania, precision platformer, and a Super-Smash-Bros-Esque Beat-em-u. <br></p>
+</div>
+<div id = "Project" >
+    <a href="/TRYtoLEAVE"><h1 style="font-size:40px;padding-bottom:1%;">Try to Leave</h1></a>
+    <img src="TRYtoLEAVE.png" class="Image">
+    <p style = "padding:3%; font-size:23px; font-weight: 40; max-width: 150; min-width: 100;">Try to Leave is another short, story-driven platformer made in Construct 3.  Based on Jordan Peele's Get Out, Try to Leave attempts to instill the same message through vastly different media.<br></p>
 </div>
 </html>
